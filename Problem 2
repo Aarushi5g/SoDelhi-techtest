@@ -1,0 +1,24 @@
+import math
+import os
+import random
+import sys
+
+def diagonalDifference(arr):
+    primary = 0
+    sec= 0
+    length = len(arr[0])
+    for count in range(length):
+        primary += arr[count][count]
+        sec += arr[count][(length-count-1)]
+    return abs(primary-sec)
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    n = int(input())
+    arr = []
+    for _ in range(n):
+    arr.append(list(map(int, input().rstrip().split())))
+    result = diagonalDifference(arr)
+    fptr.write(str(result))
+    fptr.close()
