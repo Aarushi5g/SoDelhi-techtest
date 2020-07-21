@@ -1,0 +1,23 @@
+import math
+import os
+import random
+import sys
+
+def countingValleys(s):
+    level=valley=0
+    for i in range(n):
+        if(s[i]=='U'):
+            level+=1
+            if(level==0):
+                valley+=
+        else:
+            level-=1
+    return valley
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    s = input()
+    n = len(s)
+    result = countingValleys(s)
+    fptr.write(str(result) + '\n')
+    fptr.close()
